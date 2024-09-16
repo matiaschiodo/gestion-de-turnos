@@ -1,0 +1,92 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\54341\\Documents\\Facultad\\3\\.NET\\ClinicaTurnos\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{B7FE8112-B54E-40D8-A1AD-5B960688DFF3}|Model\\Domain.csproj|c:\\users\\54341\\documents\\facultad\\3\\.net\\clinicaturnos\\model\\model\\turno.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B7FE8112-B54E-40D8-A1AD-5B960688DFF3}|Model\\Domain.csproj|solutionrelative:model\\model\\turno.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B7FE8112-B54E-40D8-A1AD-5B960688DFF3}|Model\\Domain.csproj|c:\\users\\54341\\documents\\facultad\\3\\.net\\clinicaturnos\\model\\model\\usuario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B7FE8112-B54E-40D8-A1AD-5B960688DFF3}|Model\\Domain.csproj|solutionrelative:model\\model\\usuario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 405,
+          "SelectedChildIndex": 7,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{b1e99781-ab81-11d0-b683-00aa00a3ee26}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{e1b7d1f8-9b3c-49b1-8f4f-bfc63a88835d}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{d78612c7-9962-4b83-95d9-268046dad23a}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{34e76e81-ee4a-11d0-ae2e-00a0c90fffc3}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{3ae79031-e1bc-11d0-8f78-00a0c9110057}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{aa2115a1-9712-457b-9047-dbb71ca2cdd2}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Usuario.cs",
+              "DocumentMoniker": "C:\\Users\\54341\\Documents\\Facultad\\3\\.NET\\ClinicaTurnos\\Model\\Model\\Usuario.cs",
+              "RelativeDocumentMoniker": "Model\\Model\\Usuario.cs",
+              "ToolTip": "C:\\Users\\54341\\Documents\\Facultad\\3\\.NET\\ClinicaTurnos\\Model\\Model\\Usuario.cs",
+              "RelativeToolTip": "Model\\Model\\Usuario.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAvAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-10T00:09:25.514Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Turno.cs",
+              "DocumentMoniker": "C:\\Users\\54341\\Documents\\Facultad\\3\\.NET\\ClinicaTurnos\\Model\\Model\\Turno.cs",
+              "RelativeDocumentMoniker": "Model\\Model\\Turno.cs",
+              "ToolTip": "C:\\Users\\54341\\Documents\\Facultad\\3\\.NET\\ClinicaTurnos\\Model\\Model\\Turno.cs",
+              "RelativeToolTip": "Model\\Model\\Turno.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAwAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-10T00:09:51.726Z",
+              "EditorCaption": ""
+            }
+          ]
+        },
+        {
+          "DockedWidth": 252,
+          "SelectedChildIndex": -1,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{c9c0ae26-aa77-11d2-b3f0-0000f87570ee}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{a80febb4-e7e0-4147-b476-21aaf2453969}"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
