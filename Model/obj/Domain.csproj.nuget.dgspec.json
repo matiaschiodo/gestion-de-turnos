@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\Documentos\\personalProjects\\gestion-de-turnos\\Model\\Domain.csproj": {}
+    "\\\\wsl.localhost\\Ubuntu\\home\\matiaschiodo\\personal-projects\\gestion-de-turnos\\Model\\Domain.csproj": {}
   },
   "projects": {
-    "D:\\Documentos\\personalProjects\\gestion-de-turnos\\Model\\Domain.csproj": {
+    "\\\\wsl.localhost\\Ubuntu\\home\\matiaschiodo\\personal-projects\\gestion-de-turnos\\Model\\Domain.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Documentos\\personalProjects\\gestion-de-turnos\\Model\\Domain.csproj",
+        "projectUniqueName": "\\\\wsl.localhost\\Ubuntu\\home\\matiaschiodo\\personal-projects\\gestion-de-turnos\\Model\\Domain.csproj",
         "projectName": "Domain",
-        "projectPath": "D:\\Documentos\\personalProjects\\gestion-de-turnos\\Model\\Domain.csproj",
+        "projectPath": "\\\\wsl.localhost\\Ubuntu\\home\\matiaschiodo\\personal-projects\\gestion-de-turnos\\Model\\Domain.csproj",
         "packagesPath": "C:\\Users\\matia\\.nuget\\packages\\",
-        "outputPath": "D:\\Documentos\\personalProjects\\gestion-de-turnos\\Model\\obj\\",
+        "outputPath": "\\\\wsl.localhost\\Ubuntu\\home\\matiaschiodo\\personal-projects\\gestion-de-turnos\\Model\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

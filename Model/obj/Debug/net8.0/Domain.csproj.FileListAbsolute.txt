@@ -11,3 +11,16 @@ D:\Documentos\personalProjects\gestion-de-turnos\Model\obj\Debug\net8.0\Domain.d
 D:\Documentos\personalProjects\gestion-de-turnos\Model\obj\Debug\net8.0\refint\Domain.dll
 D:\Documentos\personalProjects\gestion-de-turnos\Model\obj\Debug\net8.0\Domain.pdb
 D:\Documentos\personalProjects\gestion-de-turnos\Model\obj\Debug\net8.0\ref\Domain.dll
+\\wsl.localhost\Ubuntu\home\matiaschiodo\personal-projects\gestion-de-turnos\Model\obj\Debug\net8.0\Domain.csproj.AssemblyReference.cache
+\\wsl.localhost\Ubuntu\home\matiaschiodo\personal-projects\gestion-de-turnos\Model\obj\Debug\net8.0\Domain.GeneratedMSBuildEditorConfig.editorconfig
+\\wsl.localhost\Ubuntu\home\matiaschiodo\personal-projects\gestion-de-turnos\Model\obj\Debug\net8.0\Domain.AssemblyInfoInputs.cache
+\\wsl.localhost\Ubuntu\home\matiaschiodo\personal-projects\gestion-de-turnos\Model\obj\Debug\net8.0\Domain.AssemblyInfo.cs
+\\wsl.localhost\Ubuntu\home\matiaschiodo\personal-projects\gestion-de-turnos\Model\obj\Debug\net8.0\Domain.csproj.CoreCompileInputs.cache
+\\wsl.localhost\Ubuntu\home\matiaschiodo\personal-projects\gestion-de-turnos\Model\obj\Debug\net8.0\Domain.sourcelink.json
+\\wsl.localhost\Ubuntu\home\matiaschiodo\personal-projects\gestion-de-turnos\Model\obj\Debug\net8.0\Domain.dll
+\\wsl.localhost\Ubuntu\home\matiaschiodo\personal-projects\gestion-de-turnos\Model\obj\Debug\net8.0\refint\Domain.dll
+\\wsl.localhost\Ubuntu\home\matiaschiodo\personal-projects\gestion-de-turnos\Model\obj\Debug\net8.0\Domain.pdb
+\\wsl.localhost\Ubuntu\home\matiaschiodo\personal-projects\gestion-de-turnos\Model\bin\Debug\net8.0\Domain.deps.json
+\\wsl.localhost\Ubuntu\home\matiaschiodo\personal-projects\gestion-de-turnos\Model\bin\Debug\net8.0\Domain.dll
+\\wsl.localhost\Ubuntu\home\matiaschiodo\personal-projects\gestion-de-turnos\Model\bin\Debug\net8.0\Domain.pdb
+\\wsl.localhost\Ubuntu\home\matiaschiodo\personal-projects\gestion-de-turnos\Model\obj\Debug\net8.0\ref\Domain.dll

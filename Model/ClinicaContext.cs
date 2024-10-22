@@ -19,15 +19,14 @@ namespace Domain
         }
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder) =>
-            optionsBuilder.UseSqlServer(@"Server=(localdb)\MSSQLLocalDB;Initial Catalog=ClienteDb");
+            optionsBuilder.UseSqlServer(@"Server=(localdb)\MSSQLLocalDB;Initial Catalog=ClinicaDb");
 
-        protected override void OnModelCreating(ModelBuilder modelBuilder) 
-        {
+        /*protected override void OnModelCreating(ModelBuilder modelBuilder) {
             // base.OnModelCreating(modelBuilder);
             modelBuilder.Entity<Especialidad>()
                 .HasMany(e => e.Usuarios)
                 .WithOne(e => e.Especialidad)
-                .HasForeigney(e => e.EspecialidadId)
-        }
+                .HasForeigney(e => e.EspecialidadId);
+        }*/
     }
 }

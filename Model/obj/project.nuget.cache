@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "fnziRwk8gWVwpvYVk134zmIJAh2nJRqUzPjv1KoZPhFuJ/fbREp0ZBN3DzOMK8Z1AArgyW/S2Mzg3GHBGh8XFA==",
+  "dgSpecHash": "Yg48+ShadOubKfQTKmc5V2GpwjOlvopTrsn17OAJdi2HDz+oqvi/NTEIXeFBntQg+e5ZjBrBN8DOrR3JovujSg==",
   "success": true,
-  "projectFilePath": "D:\\Documentos\\personalProjects\\gestion-de-turnos\\Model\\Domain.csproj",
+  "projectFilePath": "\\\\wsl.localhost\\Ubuntu\\home\\matiaschiodo\\personal-projects\\gestion-de-turnos\\Model\\Domain.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\matia\\.nuget\\packages\\azure.core\\1.35.0\\azure.core.1.35.0.nupkg.sha512",
     "C:\\Users\\matia\\.nuget\\packages\\azure.identity\\1.10.3\\azure.identity.1.10.3.nupkg.sha512",

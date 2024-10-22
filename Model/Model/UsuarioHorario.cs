@@ -4,7 +4,7 @@
     {
         public int UsuarioId { get; set; }
         public int HorarioId { get; set; }
-        public Usuario Usuario { get; set; }
-        public Horario Horario { get; set; }
+        public required Usuario Usuario { get; set; }
+        public required Horario Horario { get; set; }
     }
 }

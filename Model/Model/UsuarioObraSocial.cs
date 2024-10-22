@@ -4,7 +4,7 @@
     {
         public int UsuarioId { get; set; }
         public int ObraSocialId { get; set; }
-        public Usuario Usuario { get; set; }
-        public ObraSocial ObraSocial { get; set; }
+        public required Usuario Usuario { get; set; }
+        public required ObraSocial ObraSocial { get; set; }
     }
 }
