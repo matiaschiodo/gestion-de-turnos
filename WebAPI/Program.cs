@@ -1,38 +1,43 @@
 using Domain.Services;
 using Domain.Model;
+using Domain.Interfaces;  
+using Domain;            
+using Microsoft.EntityFrameworkCore; 
 using WebAPI.EndPoints;
 
 var builder = WebApplication.CreateBuilder(args);
 
-// Add services to the container.
-// Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
+builder.Services.AddDbContext<ClinicaContext>(options =>
+    options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
+
+builder.Services.AddScoped<IEspecialidadService, EspecialidadService>();
+builder.Services.AddScoped<IHorarioService, HorarioService>();
+builder.Services.AddScoped<IObraSocialService, ObraSocialService>();
+builder.Services.AddScoped<ITurnoService, TurnoService>();
+builder.Services.AddScoped<IUsuarioService, UsuarioService>();
+
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 builder.Services.AddHttpLogging(o => { });
 
-builder.Services.AddScoped<EspecialidadService>();
-builder.Services.AddScoped<HorarioService>();
-builder.Services.AddScoped<ObraSocialService>();
-builder.Services.AddScoped<TurnoService>();
-builder.Services.AddScoped<UsuarioService>();
-
 var app = builder.Build();
 
-// Configure the HTTP request pipeline.
+app.UseExceptionHandler("/error");
+
 if (app.Environment.IsDevelopment())
 {
     app.UseSwagger();
     app.UseSwaggerUI();
-    //Falta configurar de manera correcta        
     app.UseHttpLogging();
 }
 
 app.UseHttpsRedirection();
 
-new EspecialidadEndpoint(app);
-new HorarioEndpoint(app);
-new ObraSocialEndpoint(app);
-new TurnoEndpoint(app);
-new UsuarioEndpoint(app);
+// Endpoints
+new EspecialidadEndpoint(app, builder.Services.BuildServiceProvider().GetService<IEspecialidadService>()); // Inyección de servicio
+new HorarioEndpoint(app, builder.Services.BuildServiceProvider().GetService<IHorarioService>());
+new ObraSocialEndpoint(app, builder.Services.BuildServiceProvider().GetService<IObraSocialService>());
+new TurnoEndpoint(app, builder.Services.BuildServiceProvider().GetService<ITurnoService>());
+new UsuarioEndpoint(app, builder.Services.BuildServiceProvider().GetService<IUsuarioService>());
 
 app.Run();

@@ -1,36 +1,47 @@
-﻿using Domain.Model;
+﻿using Domain.Interfaces;
+using Domain.Model;
 
-namespace Domain.Services {
-    public class ObraSocialService {
-        private ClinicaContext _context;
+namespace Domain.Services
+{
+    public class ObraSocialService : IObraSocialService
+    {
+        private readonly ClinicaContext _context;
 
-        public ObraSocialService() {
-            _context = new ClinicaContext();
+        public ObraSocialService(ClinicaContext context)
+        {
+            _context = context;
         }
 
-        public void Add(ObraSocial horario) {
-            _context.ObrasSociales.Add(horario);
+        public void Add(ObraSocial obraSocial)
+        {
+            _context.ObrasSociales.Add(obraSocial);
             _context.SaveChanges();
         }
 
-        public ObraSocial? Get(int id) {
+        public ObraSocial? Get(int id)
+        {
             return _context.ObrasSociales.Find(id);
         }
 
-        public IEnumerable<ObraSocial> GetAll() {
+        public IEnumerable<ObraSocial> GetAll()
+        {
             return _context.ObrasSociales.ToList();
         }
 
-        public void Update(ObraSocial obra_social) {
-            _context.ObrasSociales.Update(obra_social);
+        public void Update(ObraSocial obraSocial)
+        {
+            _context.ObrasSociales.Update(obraSocial);
             _context.SaveChanges();
         }
 
-        public void Delete(int id) {
-            var obra_social = _context.ObrasSociales.Find(id);
-            if (obra_social == null) return;
-            _context.ObrasSociales.Remove(obra_social);
-            _context.SaveChanges();
+        public void Delete(int id)
+        {
+            var obraSocial = _context.ObrasSociales.Find(id);
+            if (obraSocial != null)
+            {
+                _context.ObrasSociales.Remove(obraSocial);
+                _context.SaveChanges();
+            }
         }
     }
 }

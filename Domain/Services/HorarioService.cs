@@ -1,36 +1,47 @@
-﻿using Domain.Model;
+﻿using Domain.Interfaces;
+using Domain.Model;
 
-namespace Domain.Services {
-    public class HorarioService {
-        private ClinicaContext _context;
+namespace Domain.Services
+{
+    public class HorarioService : IHorarioService
+    {
+        private readonly ClinicaContext _context;
 
-        public HorarioService() {
-            _context = new ClinicaContext();
+        public HorarioService(ClinicaContext context)
+        {
+            _context = context;
         }
 
-        public void Add(Horario horario) {
+        public void Add(Horario horario)
+        {
             _context.Horarios.Add(horario);
             _context.SaveChanges();
         }
 
-        public Horario? Get(int id) {
+        public Horario? Get(int id)
+        {
             return _context.Horarios.Find(id);
         }
 
-        public IEnumerable<Horario> GetAll() {
+        public IEnumerable<Horario> GetAll()
+        {
             return _context.Horarios.ToList();
         }
 
-        public void Update(Horario horario) {
+        public void Update(Horario horario)
+        {
             _context.Horarios.Update(horario);
             _context.SaveChanges();
         }
 
-        public void Delete(int id) {
+        public void Delete(int id)
+        {
             var horario = _context.Horarios.Find(id);
-            if (horario == null) return;
-            _context.Horarios.Remove(horario);
-            _context.SaveChanges();
+            if (horario != null)
+            {
+                _context.Horarios.Remove(horario);
+                _context.SaveChanges();
+            }
         }
     }
 }
