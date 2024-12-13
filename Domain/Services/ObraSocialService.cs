@@ -39,8 +39,15 @@ namespace Domain.Services
             var obraSocial = _context.ObrasSociales.Find(id);
             if (obraSocial != null)
             {
-                _context.ObrasSociales.Remove(obraSocial);
-                _context.SaveChanges();
+                if (!_context.Usuarios.Any(u => u.ObraSocialId == id))
+                {
+                    _context.ObrasSociales.Remove(obraSocial);
+                    _context.SaveChanges();
+                }
+                else
+                {
+                    throw new InvalidOperationException("No se puede eliminar la obra social porque hay pacientes asociados a ella.");
+                }
             }
         }
     }

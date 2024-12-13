@@ -1,5 +1,6 @@
 ﻿using Domain.Interfaces;
 using Domain.Model;
+using Microsoft.EntityFrameworkCore;
 
 namespace Domain.Services
 {
@@ -20,16 +21,32 @@ namespace Domain.Services
 
         public Usuario? Get(int id)
         {
-            return _context.Usuarios.Find(id);
+            return _context.Usuarios
+                .Include(u => u.Especialidad)
+                .Include(u => u.ObraSocial)
+                .Include(u => u.Horarios)
+                .FirstOrDefault(u => u.Id == id);
         }
 
         public IEnumerable<Usuario> GetAll()
         {
-            return _context.Usuarios.ToList();
+            return _context.Usuarios
+                .Include(u => u.Especialidad)
+                .Include(u => u.ObraSocial)
+                .Include(u => u.Horarios)
+                .ToList();
         }
 
         public void Update(Usuario usuario)
         {
+            var existingUsuario = _context.Usuarios.Find(usuario.Id);
+            if (existingUsuario == null)
+                throw new ArgumentException($"No existe el usuario con ID {usuario.Id}");
+
+            // Desconectar la entidad existente
+            _context.Entry(existingUsuario).State = EntityState.Detached;
+
+            // Actualizar con la nueva entidad
             _context.Usuarios.Update(usuario);
             _context.SaveChanges();
         }
