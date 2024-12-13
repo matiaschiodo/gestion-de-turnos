@@ -1,0 +1,53 @@
+﻿@page "/turnos"
+@using Domain.Model
+@inject HttpClient Http
+
+<PageTitle>Turnos</PageTitle>
+
+<h3>Turnos</h3
+
+@if (turnos == null)
+{
+    <p><em>Cargando...</em></p>
+}
+else
+{
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Fecha y hora</th>
+                <th>Estado</th>
+                <th>Observaciones</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var turno in turnos)
+            {
+                <tr>
+                    <td>@turno.Id</td>
+                    <td>@turno.FechaHora</td>
+                    <th>@turno.Estado</th>
+                    <th>@turno.Observaciones</th>
+                </tr>
+            }
+        </tbody>
+    </table>
+}
+
+@code {
+    private Turno[]? turnos;
+
+    protected override async Task OnInitializedAsync()
+    {
+        turnos = await Http.GetFromJsonAsync<Turno[]>("turnos");
+    }
+    
+    public class Turno
+    {
+        public int Id { get; set; }
+        public DateTime FechaHora { get; set; }
+        public EstadoTurno Estado { get; set; }
+        public string? Observaciones { get; set; }
+    }
+}

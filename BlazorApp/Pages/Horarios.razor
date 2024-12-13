@@ -1,0 +1,56 @@
+﻿@page "/horarios"
+@using Domain.Model
+@inject HttpClient Http
+
+<PageTitle>Horarios</PageTitle>
+
+<h3>Horarios</h3
+
+@if (horarios == null)
+{
+    <p><em>Cargando...</em></p>
+}
+else
+{
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Dia</th>
+                <th>Hora desde</th>
+                <th>Hora hasta</th>
+                <th>Activo</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var horario in horarios)
+            {
+                <tr>
+                    <td>@horario.Id</td>
+                    <td>@horario.DiaSemana</td>
+                    <th>@horario.HoraDesde</th>
+                    <th>@horario.HoraHasta</th>
+                    <th>@horario.Activo</th>
+                </tr>
+            }
+        </tbody>
+    </table>
+}
+
+@code {
+    private Horario[]? horarios;
+
+    protected override async Task OnInitializedAsync()
+    {
+        horarios = await Http.GetFromJsonAsync<Horario[]>("horarios");
+    }
+    
+    public class Horario
+    {
+        public int Id { get; set; }
+        public DayOfWeek DiaSemana { get; set; }
+        public TimeSpan HoraDesde { get; set; }
+        public TimeSpan HoraHasta { get; set; }
+        public bool Activo { get; set; }
+    }
+}

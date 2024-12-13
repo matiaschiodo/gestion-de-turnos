@@ -1,0 +1,63 @@
+﻿@page "/reportes"
+@using Domain.Model
+
+@inject HttpClient Http
+
+<PageTitle>Reportes</PageTitle>
+
+@if (reporteTurnosPorMes == null) {
+    <p><em>Cargando...</em></p>
+} else {
+    <h4>Cantidad de turnos por mes</h4>
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Mes</th>
+                <th>Cantidad</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var mes in reporteTurnosPorMes)
+            {
+                <tr>
+                    <td>@mes.Mes</td>
+                    <td>@mes.Cantidad</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+}
+
+@if (reporteTurnosPorEstados == null) {
+    <p><em>Cargando...</em></p>
+} else {
+    <h4>Cantidad de turnos por estado</h4>
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Estado</th>
+                <th>Cantidad</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var mes in reporteTurnosPorEstados)
+            {
+                <tr>
+                    <td>@mes.Estado</td>
+                    <td>@mes.Cantidad</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+}
+
+@code {
+    private ReporteTurnosPorMes[]? reporteTurnosPorMes;
+    private ReporteTurnosPorEstados[]? reporteTurnosPorEstados;
+
+    protected override async Task OnInitializedAsync()
+    {
+        reporteTurnosPorMes = await Http.GetFromJsonAsync<ReporteTurnosPorMes[]>("/reporte/turnos-por-mes");
+        reporteTurnosPorEstados = await Http.GetFromJsonAsync<ReporteTurnosPorEstados[]>("/reporte/turnos-por-estados");
+    }
+}

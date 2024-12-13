@@ -1,0 +1,50 @@
+﻿@page "/obras-sociales"
+@using Domain.Model
+@inject HttpClient Http
+
+<PageTitle>Obras sociales</PageTitle>
+
+<h3>Obras sociales</h3
+
+@if (obras_sociales == null)
+{
+    <p><em>Cargando...</em></p>
+}
+else
+{
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Nombre</th>
+                <th>Descripcion</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var obra_social in obras_sociales)
+            {
+                <tr>
+                    <td>@obra_social.Id</td>
+                    <td>@obra_social.Nombre</td>
+                    <td>@obra_social.Descripcion</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+}
+
+@code {
+    private ObraSocial[]? obras_sociales;
+
+    protected override async Task OnInitializedAsync()
+    {
+        obras_sociales = await Http.GetFromJsonAsync<ObraSocial[]>("obras-sociales");
+    }
+
+    public class ObraSocial
+    {
+        public int Id { get; set; }
+        public required string Nombre { get; set; }
+        public string? Descripcion { get; set; }
+    }
+}

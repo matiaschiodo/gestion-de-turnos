@@ -1,0 +1,60 @@
+﻿@page "/usuarios"
+@using Domain.Model
+@inject HttpClient Http
+
+<PageTitle>Usuarios</PageTitle>
+
+<h3>Usuarios</h3
+
+@if (usuarios == null)
+{
+    <p><em>Cargando...</em></p>
+}
+else
+{
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Nombre</th>
+                <th>Apellido</th>
+                <th>DNI</th>
+                <th>Telefono</th>
+                <th>Email</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var usuario in usuarios)
+            {
+                <tr>
+                    <td>@usuario.Id</td>
+                    <td>@usuario.Nombre</td>
+                    <th>@usuario.Apellido</th>
+                    <th>@usuario.Dni</th>
+                    <th>@usuario.Telefono</th>
+                    <th>@usuario.Email</th>
+                </tr>
+            }
+        </tbody>
+    </table>
+}
+
+@code {
+    private Usuario[]? usuarios;
+
+    protected override async Task OnInitializedAsync()
+    {
+        usuarios = await Http.GetFromJsonAsync<Usuario[]>("usuarios");
+    }
+
+    public class Usuario
+    {
+        public int Id { get; set; }
+        public required string Nombre { get; set; }
+        public required string Apellido { get; set; }
+        public required string Dni { get; set; }
+        public required string Telefono { get; set; }
+        public required string Email { get; set; }
+        public required string Password { get; set; }
+    }
+}
